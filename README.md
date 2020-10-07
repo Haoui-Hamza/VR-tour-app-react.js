@@ -31,4 +31,21 @@ To see your project, open your web browser and navigate to http://localhost:8081
   
   Congratulations now you have your first webVR app running on your server 💪🥁🥁
 ### 2- Add Background changer 
-role : the background changer helps us to move between rooms in our VR Tour app
+**Role : the background changer helps us to move between rooms in our VR Tour app**
+
+**first** let's remove the default code in VR_ENV class at `index.js` and let only one View tag ( every class must contain at least one View tag )
+```javascript
+export default class VR_ENV extends React.Component {
+  render() {
+    return (
+      <View>
+        
+      </View>
+    );
+  }
+};
+
+}
+```
+     
+
