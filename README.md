@@ -25,7 +25,8 @@ After installation, we can use it to generate the initial code for our first pro
 This creates a new directory called VR_ENV, with all of the files needed to run your project. Enter the directory to view them and run the npm start command 
     
     cd Hello360
-    //start the development server
+to start the development server ⬇️
+    
     npm start
 To see your project, open your web browser and navigate to http://localhost:8081/index.html .
   
@@ -63,6 +64,7 @@ To see your project, open your web browser and navigate to http://localhost:8081
   }
 ```
 > don't forget to import `import {Environment} from 'react-360';`.
+
 > add 3 images to `static_assets` folder and respenct naming convention example `bg1.jpg` .
      
-
+# Integrate the VR app inside reactjs app
