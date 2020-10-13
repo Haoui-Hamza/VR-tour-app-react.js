@@ -33,19 +33,27 @@ To see your project, open your web browser and navigate to http://localhost:8081
 ### 2- Add Background changer 
 **Role : the background changer helps us to move between rooms in our VR Tour app**
 
-**first** let's remove the default code in VR_ENV class at `index.js` and let only one View tag ( every class must contain at least one View tag )
+**first** let's remove the default code in VR_ENV class at `index.js` and let only one View tag ( every class must contain at least one View tag ) , then add inside of it 3 VrButton components with an Image inside each component **The VrButton is a utility class that detects click-type actions across a variety of input devices** the onClick event must contain the function that will help us to change the background Image (room)
 ```javascript
-export default class VR_ENV extends React.Component {
-  render() {
-    return (
-      <View>
-        
-      </View>
-    );
-  }
-};
+  <View style={{
+     width: 1000,
+     height: 1100,
+     justifyContent: 'center',
+     alignItems: 'flex-end',}}
+  >
+        <View style={styles.panel1}>
+          <VrButton onClick={() => this.changeBG(1)}>                
+              <Image style={{width: 100.0, height:80.0 , borderRadius: 10, }} source={{uri: './static_assets/bg1.jpg'   }} />
+          </VrButton>
+          <VrButton onClick={() => this.changeBG(2)}>                
+              <Image style={{width: 100.0, height:80.0 ,borderRadius: 10, }} source={{uri: './static_assets/bg2.jpg'   }} />
+          </VrButton>
 
-}
+          <VrButton onClick={() => this.changeBG(3)}>  
+              <Image style={{width: 100.0, height:80.0 ,borderRadius: 10, }} source={{uri: './static_assets/bg3.jpg'   }} />
+          </VrButton>
+        </View>
+   </View>
 ```
      
 
