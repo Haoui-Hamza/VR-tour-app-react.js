@@ -68,3 +68,41 @@ To see your project, open your web browser and navigate to http://localhost:8081
 > add 3 images to `static_assets` folder and respenct naming convention example `bg1.jpg` .
      
 # Integrate the VR app inside reactjs app
+
+  ### 1- create new react project
+  first we have to create a new react.js app
+  ```
+  npx create-react-app mon-app
+
+cd mon-app
+
+npm start
+```
+then we add some styling ( header and text panel ) to get it just go and check `app.js` & `app.css` and `Header.js` for the NavBar ✅
+
+### 2-integrating the VR environment 🤔
+before we start this part of the tutorial your have to make sure that ur app is running on `http://localhost:8081/index.html` 
+
+The recommended manner of embedding React 360 content into a larger web page is to use an Iframe. Point the src attribute of your <iframe> tag to your project's index HTML file. This technique guarantees that your application won't interfere with the parent web page, and the parent web page won't be able to slow down rendering of your app 
+
+```javascript
+  function App() {
+  return (
+    <div className="App">
+      
+      <Header/>
+      <div className="app__home">
+        <div className="app__vrframe">
+          <iframe src="http://localhost:8081/index.html" width="100%" height="500"></iframe>
+        </div>
+        <div className="app__card">
+          <b style={{color:"#fff"}}>Planetarium</b>
+          <p className="">The dome can seat up to 109 visitors, has an inclination of 25 degrees, and gives you the experience of not only watching a show, but also of being in the middle of the action in the Universe. This, combined with the most up-to-date programmes for our planetarium shows, creates a stunning experience that completely immerses you in space.</p>
+        </div>
+      </div>
+      
+    </div>
+  );
+}
+```
+congratulations now you have your first VR app (panoramic view) running in React.js application 🎉
